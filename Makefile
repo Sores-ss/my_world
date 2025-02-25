@@ -9,6 +9,8 @@ SRC	=	src/main.c \
 		src/tridim_to_bidim.c \
 		src/free.c \
 		src/tile.c \
+		src/init_ressources.c \
+		src/draw_map.c \
 
 OBJ	=	$(SRC:.c=.o)
 
