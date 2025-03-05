@@ -2,45 +2,10 @@
 ** EPITECH PROJECT, 2024
 ** G-ING-200-LIL-2-1-myworld-arthur.vignes
 ** File description:
-** init_ressources.c
+** init_tile_textures.c
 */
 
 #include "my_world.h"
-
-void init_game(game_t *game)
-{
-    char *mode = malloc(sizeof(char) * 5);
-
-    game->mode = (sfVideoMode){1920, 1080, 32};
-    game->window = sfRenderWindow_create(game->mode, "my_world",
-        sfResize | sfClose, NULL);
-    sfRenderWindow_setFramerateLimit(game->window, 60);
-    game->window_size = (sfVector2f){1920, 1080};
-    game->angle_x = 30;
-    game->angle_y = 20;
-    mode = strdup("view");
-    game->state_mode = strdup(mode);
-    free(mode);
-}
-
-int init_map_texture(map_t *map)
-{
-    map->texture =
-    sfTexture_createFromFile("graphics/textures/grass.png", NULL);
-    if (!map->texture) {
-        printf("Error: Failed to load texture\n");
-        return 0;
-    }
-    sfTexture_setRepeated(map->texture, sfTrue);
-    return 1;
-}
-
-void init_map_dimensions(map_t *map)
-{
-    map->map_height = MAP_HEIGHT;
-    map->map_width = MAP_WIDTH;
-    map->tile_size = TILE_SIZE;
-}
 
 static bool free_allocated_texture_rows(map_t *map, int y)
 {
@@ -74,7 +39,7 @@ bool init_tile_textures(map_t *map)
     return true;
 }
 
-static bool init_map_components(map_t *map)
+static bool init_map_arrays(map_t *map)
 {
     map->array_map = create_zeroed_map(map->map_height, map->map_width);
     if (!map->array_map)
@@ -84,15 +49,6 @@ static bool init_map_components(map_t *map)
         free(map->array_map);
         return false;
     }
-    return true;
-}
-
-static bool setup_map_resources(map_t *map)
-{
-    if (!init_map_texture(map))
-        return false;
-    if (!init_map_components(map))
-        return false;
     if (!init_tile_textures(map)) {
         free_maps(map->array_map, map->iso_map, map->map_height);
         return false;
@@ -107,7 +63,11 @@ map_t *init_map(void)
     if (!map)
         return NULL;
     init_map_dimensions(map);
-    if (!setup_map_resources(map)) {
+    if (!init_map_texture(map)) {
+        free(map);
+        return NULL;
+    }
+    if (!init_map_arrays(map)) {
         free(map);
         return NULL;
     }
