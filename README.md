@@ -34,17 +34,14 @@ Deux modes principaux sont disponibles :
 
 - **Clic gauche** : sélectionner une texture avec un bouton ou appliquer une texture sur une tuile
 
----
-
-## 💡 Note personnelle
-
-Ce projet est l’un de mes **premiers projets graphiques avancés**.  
-Il m’a permis de comprendre les bases de l’affichage isométrique, la gestion des événements complexes, et la création d’un éditeur d’environnement interactif.  
-Des ajouts sont prévus dans le futur :  
-- meilleure ergonomie,  
-- sauvegarde de carte,  
-- export d’image,  
-- et amélioration du système de textures.
+>💡 Note personnelle :  
+>Ce projet est l’un de mes **premiers projets graphiques avancés**.  
+>Il m’a permis de comprendre les bases de l’affichage isométrique, la gestion des événements complexes, et la création d’un éditeur d’environnement interactif.  
+>Des ajouts sont prévus dans le futur :  
+>- meilleure ergonomie,  
+>- sauvegarde de carte,  
+>- export d’image,  
+>- et amélioration du système de textures.
 
 ---
 
@@ -60,9 +57,10 @@ sudo apt-get install libcsfml-dev
 make
 ./my_world
 ```
-## 👨‍💻 Auteur
+## 👨‍💻 Auteurs
+Arthur Vignes  
 Eros Delianne Le Boucher  
-Étudiant en 1ʳᵉ année à EPITECH Lille (Promo 2029)  
+Étudiants en 1ʳᵉ année à EPITECH Lille (Promo 2029)  
 Ce projet a été réalisé dans le cadre du module B-MUL-200 (programmation graphique avancée en C avec CSFML).  
 
 > 📌 Ce dépôt est personnel, non officiel, et publié dans un objectif pédagogique.
