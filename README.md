@@ -58,7 +58,7 @@ make
 ./my_world
 ```
 ## 👨‍💻 Auteurs
-  - Arthur Vignes -> https://github.com/4rthurV  
+  - [Arthur Vignes](https://github.com/4rthurV)  
   - Eros Delianne Le Boucher
 
 Étudiants en 1ʳᵉ année à EPITECH Lille (Promo 2029)  
