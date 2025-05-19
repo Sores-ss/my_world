@@ -58,8 +58,9 @@ make
 ./my_world
 ```
 ## 👨‍💻 Auteurs
-Arthur Vignes  
-Eros Delianne Le Boucher  
+  - Arthur Vignes -> https://github.com/4rthurV  
+  - Eros Delianne Le Boucher
+
 Étudiants en 1ʳᵉ année à EPITECH Lille (Promo 2029)  
 Ce projet a été réalisé dans le cadre du module B-MUL-200 (programmation graphique avancée en C avec CSFML).  
 
